@@ -29,7 +29,8 @@ class App extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      second: 0
+      second: 0,
+      index: 0
     }
   }
   componentDidMount() {
@@ -61,7 +62,8 @@ class App extends PureComponent {
         {/* <Game /> */}
         <ClockNew />
         <NewCInput label="HOC" style={{ color: "blue" }} />
-        <CInput label="Chỗ ở hiện tại" defaultValue="Ha Noi" />
+        <CInput label={"Chỗ ở hiện tại" + this.state.index} defaultValue="Ha Noi" />
+        <button onClick={() => this.setState({ index: this.state.index + 1 })}>Count</button>
       </div >
     );
   }
