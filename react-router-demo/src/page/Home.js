@@ -7,6 +7,7 @@ function Home() {
     useEffect(() => setCaculator(count > 0 ? calculator + 2 : calculator), [count]);
     console.log("render....")
     const languageContext = useContext(LanguageContext)
+    // const languageContext = LanguageContext;
     return <div>
         {languageContext === "en" ? <p>This is home page</p> : <p>Đây là trang chủ</p>}
         <p>Button click {count} time, calculator = {calculator} </p>

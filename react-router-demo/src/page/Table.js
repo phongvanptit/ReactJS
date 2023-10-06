@@ -18,8 +18,8 @@ function Table(props) {
                         <td>{element.name}</td>
                         <td>{element.age}</td>
                         <td>
-                            <button disabled={role !== "ADMIN"}>Delete</button>
-                            <button disabled={role !== "ADMIN"}>Edit</button>
+                            <button disabled={role !== "ADMIN"} onClick={() => props.deleteUser(element.id)}>Delete</button>
+                            <button disabled={role !== "ADMIN"} onClick={() => props.updateUser(element)}>Edit</button>
                         </td>
                     </tr>
                 )
